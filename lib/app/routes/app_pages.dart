@@ -1,3 +1,5 @@
+import 'package:flutter_getx_template/app/modules/login/bindings/login_binding.dart';
+import 'package:flutter_getx_template/app/modules/login/views/login_view.dart';
 import 'package:get/get.dart';
 
 import '/app/modules/favorite/bindings/favorite_binding.dart';
@@ -18,7 +20,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.MAIN;
+  static const INITIAL = Routes.LOGIN;
 
   static final routes = [
     GetPage(
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.PROJECT_DETAILS,
       page: () => ProjectDetailsView(),
       binding: ProjectDetailsBinding(),
+    ),
+    GetPage(
+        name: _Paths.LOGIN,
+        page: () => LoginView(),
+      binding: LoginBinding(),
     ),
   ];
 }
